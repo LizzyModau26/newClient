@@ -1,0 +1,44 @@
+#main-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'Nunito', serif;
+    
+    
+    }
+     #mid-cont{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 80%;
+         height: 100%;
+        ;
+     }
+    ion-title{
+        text-align: center;
+       
+        font-family: 'Nunito', serif;
+        
+    }
+    ion-row{
+        justify-content: center;
+        align-items: center;
+    }
+    ion-col{
+        justify-content: center;
+        align-items: center;
+
+    }
+    ion-icon{
+        display: flex;
+        position: relative;
+        top: 50%;
+        left:25%;
+        right:50%;
+
+    }
+    ion-card{
+        box-shadow: #9b9b9a 10px 10px 20px;
+    }

@@ -1,0 +1,18 @@
+#welcome{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items:center ;
+  justify-content: center;
+  background-color: rgba(255,188,0,1) ;
+  color: white;
+  font-family: 'Nunito', serif ;
+  margin-top: 0%;
+  
+ 
+}
+ion-img{
+  margin-left: 20px;
+  margin-right: 20px;
+}

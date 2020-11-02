@@ -1,0 +1,35 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-family:  'Nunito', serif ;
+    align-items: center;
+    justify-content: center;
+    
+    }
+    #main-holder{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 80%;
+        margin-left: 35px;
+        justify-content: center;
+        align-content: center;
+    }
+    ion-label{
+        margin-left: 0px;
+        color:  rgba(255,188,0,1);
+    }
+    ion-input{
+        color: rgba(255,188,0,1);
+    }
+    h1{
+        color: rgba(255,188,0,1);
+      }
+      #logo-con{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }

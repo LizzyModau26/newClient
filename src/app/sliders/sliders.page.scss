@@ -1,0 +1,34 @@
+#container{
+    font-family: 'Nunito', serif ;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+}
+#slide-content{
+    height: 90%;
+    width: 90%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+    
+  }
+  #slide1, #slide2, #slide3, #slide4, #slide5 {
+
+    display: flex;
+    flex-direction: column;
+  }
+  #logo-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  ion-button{
+    background-color: rgba(255,188,0,1) ;
+}
+
