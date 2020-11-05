@@ -5,5 +5,40 @@
 </ion-header>
 
 <ion-content>
+  <form [formGroup]="profileForm" (ngSubmit)="addRes()">
+    <ion-item>
+      <ion-label>Resturant Name</ion-label>
+      <ion-input type="text" formControlName="resName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Resturant Description</ion-label>
+      <ion-input type="text" formControlName="resDes"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Resturant Address</ion-label>
+      <ion-input  type="text" formControlName="resAdd"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Resturant Registratio-No</ion-label>
+      <ion-input  type="text" formControlName="resReg"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tell-Phone Number</ion-label>
+      <ion-input  type="number" formControlName="resTel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Resturant Email</ion-label>
+      <ion-input  type="email" formControlName="resEmail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Resturant Rating</ion-label>
+      <ion-input  type="text" formControlName="resRate"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input  type="file" formControlName="img" accept="image/*" (change)="addPic($event)"></ion-input>
+    </ion-item>
+  
+</form>
+<ion-button type="submit" (click)='addRes()'>Save</ion-button>
 
 </ion-content>
