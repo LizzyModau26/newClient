@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms'
 import { RouteReuseStrategy } from '@angular/router';
 
 
@@ -11,11 +12,13 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { FirebaseService } from './services/firebase.service';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp({
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFirestoreModule , ReactiveFormsModule, AngularFireModule.initializeApp({
     apiKey: "AIzaSyAH1J0IqqQxPKXyna_ZxDuqGIhyIU2ov8Q",
     authDomain: "resturantapp-ff840.firebaseapp.com",
     databaseURL: "https://resturantapp-ff840.firebaseio.com",

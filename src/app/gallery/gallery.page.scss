@@ -1,0 +1,19 @@
+#container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+    height: 20%;
+    width: 100%;
+    background-color: #FFBC00;
+    border-bottom-right-radius: 40px;
+
+    font-family: 'Nunito', serif;
+}

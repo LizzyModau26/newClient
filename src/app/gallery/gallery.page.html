@@ -9,5 +9,30 @@
 </ion-toolbar>
 
 <ion-content>
+  <form [formGroup]="galleryForm" (ngSubmit)="addGallery()">
+  <ion-item>
+    <ion-label>Dish Price</ion-label>
+    <ion-input  type="text" formControlName="dishPrice"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Dish Description</ion-label>
+    <ion-input  type="tex" formControlName="dishDes"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Dish Name</ion-label>
+    <ion-input  type="text" formControlName="dishName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input  type="file" formControlName="dishimg" accept="image/*" (change)="addPic($event)"></ion-input>
+  </ion-item>
+
+</form>
+<ion-button type="submit" (click)="addGallery()">Save</ion-button>
+
+<div id="view-gall">
+
+
+  
+</div>
 
 </ion-content>

@@ -1,9 +1,56 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon routerLink="/main" name="arrow-back-outline" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
+    </ion-buttons>
     <ion-title>edit-profile</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <form [formGroup]="profileForm" (ngSubmit)="addRes()">
+    <ion-grid>
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" formControlName="resName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-input type="textarea" row="3" formControlName="resDes"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Address</ion-label>
+      <ion-input  type="text" formControlName="resAdd"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Registration Number</ion-label>
+      <ion-input  type="text" formControlName="resReg"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Tel-Number</ion-label>
+      <ion-input  type="number" formControlName="resTel"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input  type="email" formControlName="resEmail"></ion-input>
+    </ion-item>
+  </ion-col>
+    <ion-col>
+    <ion-item>
+      <ion-label position="floating" >Rating</ion-label>
+      <ion-input  type="text" formControlName="resRate"></ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+    <ion-item>
+      <ion-input  type="file" formControlName="img" accept="image/*" (change)="addPic($event)"></ion-input>
+    </ion-item>
+  
+  </ion-grid>
+</form>
+<ion-button type="submit" (click)='addRes()'>Save</ion-button>
 
 </ion-content>
+

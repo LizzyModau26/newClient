@@ -1,44 +1,40 @@
-#main-cont{
+#container{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     font-family: 'Nunito', serif;
-    
+   
     
     }
-     #mid-cont{
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         width: 80%;
-         height: 100%;
-        ;
-     }
+ion-grid{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 100%;
+        justify-content: center;
+
+    }
+
     ion-title{
         text-align: center;
-       
         font-family: 'Nunito', serif;
-        
     }
+    
+
     ion-row{
+        height: 200px;
+        width: 100% !important;
         justify-content: center;
-        align-items: center;
-    }
-    ion-col{
-        justify-content: center;
-        align-items: center;
-
-    }
-    ion-icon{
-        display: flex;
-        position: relative;
-        top: 50%;
-        left:25%;
-        right:50%;
-
-    }
-    ion-card{
-        box-shadow: #9b9b9a 10px 10px 20px;
-    }
+  }
+   ion-card{
+       display: flex;
+       flex-direction: column;
+       justify-self: center;
+       position: relative;
+       width: 90%;
+       height: 160px;
+       text-align: center;
+       background-image: url('/src/assets/images/fried-squid-calamari-rings.jpg');
+   }
