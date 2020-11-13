@@ -18,7 +18,7 @@ export class GalleryPage implements OnInit {
   resID: any
   selectedFile: File = null;
   upLoadedFile: any;
-
+  dishlist: Array<any> = []
 
 
   constructor(public firebaseService: FirebaseService,
@@ -29,6 +29,18 @@ export class GalleryPage implements OnInit {
 
 
   ngOnInit() {
+
+    var user = firebase.auth().currentUser
+      this.resID = user.uid;
+      console.log('id: ', this.resID)
+  
+      firebase.firestore().collection('resturants').doc(this.resID).collection('dishes').get().then(snapshot =>{
+        snapshot.docs.forEach(dishes => {
+          this.dishlist.push(dishes.data())
+          console.log('dishes: ', this.dishlist)
+        })
+      })
+
     this.EditProPage();
   }
 
@@ -71,6 +83,8 @@ export class GalleryPage implements OnInit {
         
       };
     }
+
+  
 }
 
 

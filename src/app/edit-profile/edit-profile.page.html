@@ -1,13 +1,13 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-icon routerLink="/main" name="arrow-back-outline" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
-    </ion-buttons>
-    <ion-title>edit-profile</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-toolbar>
+  <ion-title>Edit Store Profile</ion-title>
+  <ion-buttons slot="start">
+    <ion-icon routerLink="/main" name="arrow-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
+  </ion-buttons>
+</ion-toolbar>
 
 <ion-content>
+  <div id="container">
+    <div id="mid-cont">
   <form [formGroup]="profileForm" (ngSubmit)="addRes()">
     <ion-grid>
     <ion-item>
@@ -37,6 +37,8 @@
       <ion-input  type="email" formControlName="resEmail"></ion-input>
     </ion-item>
   </ion-col>
+</ion-row>
+    <ion-row>
     <ion-col>
     <ion-item>
       <ion-label position="floating" >Rating</ion-label>
@@ -44,13 +46,16 @@
     </ion-item>
   </ion-col>
 </ion-row>
+<br>
     <ion-item>
       <ion-input  type="file" formControlName="img" accept="image/*" (change)="addPic($event)"></ion-input>
     </ion-item>
   
   </ion-grid>
 </form>
+<br>
 <ion-button type="submit" (click)='addRes()'>Save</ion-button>
-
+</div>
+</div>
 </ion-content>
 

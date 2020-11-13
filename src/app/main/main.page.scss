@@ -17,7 +17,7 @@ ion-grid{
 
     }
 
-    ion-title{
+    ion-card-title, ion-title{
         text-align: center;
         font-family: 'Nunito', serif;
     }
@@ -36,5 +36,5 @@ ion-grid{
        width: 90%;
        height: 160px;
        text-align: center;
-       background-image: url('/src/assets/images/fried-squid-calamari-rings.jpg');
+       
    }
