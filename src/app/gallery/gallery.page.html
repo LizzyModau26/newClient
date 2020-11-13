@@ -1,49 +1,59 @@
 <ion-toolbar>
-  <ion-title>Gallery</ion-title>
+  <ion-title>Store Gallery</ion-title>
   <ion-buttons slot="start">
-    <ion-icon routerLink="/main" name="arrow-back-outline" color="primary" autoHide="false" style="zoom:1.4; margin-left: 10px;"></ion-icon>
+    <ion-icon routerLink="/main" name="arrow-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
   </ion-buttons>
- 
 </ion-toolbar>
 
-
 <ion-content>
+  <div id="container">
+    <div id="mid-cont">
+      <h5>Add Store Dishes</h5>
   <form [formGroup]="galleryForm" (ngSubmit)="addGallery()">
+    <ion-grid>
+      <ion-row>
   <ion-item>
-    <ion-label>Dish Price</ion-label>
-    <ion-input  type="text" formControlName="dishPrice"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Dish Description</ion-label>
-    <ion-input  type="tex" formControlName="dishDes"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Dish Name</ion-label>
-    <ion-input  type="text" formControlName="dishName"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input  type="file" formControlName="dishimg" accept="image/*" (change)="addPic($event)"></ion-input>
-  </ion-item>
-
+      <ion-label position="floating">Dish Name</ion-label>
+      <ion-input  type="text" formControlName="dishName"></ion-input>
+    </ion-item>
+  </ion-row>
+    <ion-row>
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-input  type="text" formControlName="dishDes"></ion-input>
+    </ion-item>
+</ion-row>
+    <ion-row>
+    <ion-item>
+      <ion-label position="floating" >Dish Price</ion-label>
+      <ion-input  type="number" formControlName="dishPrice"></ion-input>
+    </ion-item>
+</ion-row>
+<br>
+    <ion-item>
+      <ion-input  type="file" formControlName="dishimg" accept="image/*" (change)="addPic($event)"></ion-input>
+    </ion-item>
+  
+  </ion-grid>
 </form>
-<ion-button type="submit" (click)="addGallery()">Save</ion-button>
+<br>
+<ion-button type="submit" (click)='addGallery()'>Add</ion-button>
 
-<div id="view-gall">
+<br>
+<br>
 
-  <div *ngFor="let item of resID " >
-    <ion-card >
-      <img src= {{item.dishimg}}  />
-      <ion-card-header>
-        <ion-card-subtitle>{{item.dishName}} </ion-card-subtitle>
-        <ion-card-title>{{item.dishPrice}}</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        {{item.dishDes}} <br> 
-      </ion-card-content>
-    </ion-card>
+<ion-card *ngFor="let dish of dishlist" >
+  <img src="{{dish.dishimg}}">
+  <ion-header>
+    <ion-card-subtitle>{{dish.dishName}}</ion-card-subtitle>
+    <ion-card-subtitle>{{dish.dishPrice}}</ion-card-subtitle>
+  </ion-header>
+ 
+</ion-card>
   
-  </div>
-  
+</div>
 </div>
 
 </ion-content>
+
+

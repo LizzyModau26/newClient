@@ -3,40 +3,32 @@
   <ion-buttons slot="start">
     <ion-icon routerLink="/main" name="arrow-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
   </ion-buttons>
+  <ion-buttons slot="end">
+    <ion-icon color='primary' routerLink="/edit-profile" name="pencil" style="zoom:1.4; margin-right: 10px;"></ion-icon>
+  </ion-buttons>
  
 </ion-toolbar>
+<ion-content>
 
-<div >
-  <ion-list>
-    <ion-item>
-    {{resID?.img}}
-    </ion-item>
-<ion-item>
-{{resID?.resName}}
-</ion-item>
-<ion-item>
-  {{resID?.resAdd}}
-</ion-item>
-<ion-item>
-  {{resID?.resDes}}
-</ion-item>
-<ion-item>
-  {{resID?.resReg}}
-</ion-item>
-<ion-item>
-  {{resID?.resTel}}
-</ion-item>
-<ion-item>
-  {{resID?.resRate}}
-</ion-item>
-</ion-list>
-</div>
-
-
-  <div id="bottom-content">
+  <div id="container">
     
-  <ion-button expand="block" routerLink="/edit-profile">Edit Profile</ion-button>
-</div>
+     <div id="img-placeholder">
+      <img src="{{resID?.img}}" >
+     </div>
+     <div id="mid-cont">
+     <ion-grid>
+       <ion-row><h5>Resturant Name : {{resID.resName}}</h5></ion-row>
+       <ion-row><h5>Resturant Description : {{resID?.resDes}}</h5></ion-row>
+       <ion-row><h5>Resturant Address : {{resID?.resAdd}}</h5></ion-row>
+       <ion-row><h5>Resturant Email : {{resID?.resEmail}}</h5></ion-row>
+       <ion-row><h5>Resturant Number : {{resID?.resTel}}</h5></ion-row>
+       <ion-row><h5>Resturant Registration No. : {{resID?.resReg}}</h5></ion-row>
+       <ion-row><h5>Resturant Rating : {{resID?.resRate}}<ion-icon name="star-outline"></ion-icon></h5></ion-row>
+     </ion-grid>
+
+    </div>
+  </div>
+</ion-content>
 
    
  
