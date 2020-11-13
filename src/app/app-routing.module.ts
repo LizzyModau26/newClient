@@ -39,10 +39,7 @@ const routes: Routes = [
     path: 'bookings',
     loadChildren: () => import('./bookings/bookings.module').then( m => m.BookingsPageModule)
   },
-  {
-    path: 'calender',
-    loadChildren: () => import('./calender/calender.module').then( m => m.CalenderPageModule)
-  },
+  
   {
     path: 'edit-profile',
     loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
