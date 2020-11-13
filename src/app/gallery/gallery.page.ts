@@ -84,9 +84,10 @@ export class GalleryPage implements OnInit {
         
       };
     }
-
+    RemoveItem() {
+      this.firebaseService.delete_Items()
   
 }
-
+}
 
 

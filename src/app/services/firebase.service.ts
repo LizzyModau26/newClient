@@ -49,5 +49,10 @@ isLoggedIn = false
       return this.firestore.collection('resturants').doc('user.id').snapshotChanges();
     }
 
-   
+    delete_Items(){
+      this.firestore.collection('resturants').doc('user.id').collection('dishes').doc().delete();
+   }
+   getBookings(){
+     return this.firestore.collection('resturants').get()
+   }
 }

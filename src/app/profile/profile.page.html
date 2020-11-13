@@ -11,19 +11,20 @@
 <ion-content>
 
   <div id="container">
-    
-     <div id="img-placeholder">
-      <img src="{{resID?.img}}" >
-     </div>
-     <div id="mid-cont">
-     <ion-grid>
+  <div id="mid-cont">
+      <ion-grid>
+       <ion-row>
+        <div id="img-placeholder">
+          <img src="{{resID?.img}}" >
+         </div>
+       </ion-row>
        <ion-row><h5>Resturant Name : {{resID.resName}}</h5></ion-row>
        <ion-row><h5>Resturant Description : {{resID?.resDes}}</h5></ion-row>
        <ion-row><h5>Resturant Address : {{resID?.resAdd}}</h5></ion-row>
        <ion-row><h5>Resturant Email : {{resID?.resEmail}}</h5></ion-row>
        <ion-row><h5>Resturant Number : {{resID?.resTel}}</h5></ion-row>
        <ion-row><h5>Resturant Registration No. : {{resID?.resReg}}</h5></ion-row>
-       <ion-row><h5>Resturant Rating : {{resID?.resRate}}<ion-icon name="star-outline"></ion-icon></h5></ion-row>
+       <ion-row><h5>Resturant Rating : {{resID?.resRate}}<ion-icon name="star" color="primary"></ion-icon></h5></ion-row>
      </ion-grid>
 
     </div>

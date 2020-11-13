@@ -15,7 +15,6 @@ height: 100%;
 #mid-cont{
     display: flex;
     flex-direction: column;
-   
     width: 90%;
     height: 100%;
 }
@@ -25,5 +24,10 @@ h5{
 }
 
 img{
-    height: 20px;
+    height: 100px;
+}
+ion-card{
+    display: flex;
+    width: 10%;
+    height: 10%;
 }

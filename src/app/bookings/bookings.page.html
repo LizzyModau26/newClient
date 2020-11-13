@@ -5,7 +5,26 @@
   </ion-buttons>
 </ion-toolbar>
 <ion-content>
-
+  <div id="main-cont">
+    <div id="mid-cont">
+    <ion-grid>
+      <div >
+        <ion-row>
+          <ion-card *ngFor="let item of booking">
+           <ion-card-header>
+              <ion-card-title>{{item.useName}}</ion-card-title>
+              <ion-card-subtitle>{{item.useEmail}} </ion-card-subtitle>
+              <ion-card-subtitle>{{item.useNum}} </ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              {{item.date}} at {{item.time}} <ion-icon name="star" color="primary"></ion-icon>
+            </ion-card-content>
+          </ion-card>
+        </ion-row>
+        </div>
+      </ion-grid>
+    </div>
+      </div>
 
 
 
