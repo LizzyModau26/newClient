@@ -27,4 +27,9 @@
     h1{
         color: rgba(255,188,0,1);
       }
-    
+      #logo-con{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+      }

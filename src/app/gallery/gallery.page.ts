@@ -30,6 +30,7 @@ export class GalleryPage implements OnInit {
 
   ngOnInit() {
     this.EditProPage();
+    
   }
 
   EditProPage(){
@@ -71,6 +72,15 @@ export class GalleryPage implements OnInit {
         
       };
     }
+    viewGall(){
+      var user = firebase.auth().currentUser
+      this.resID = user.uid;
+  
+      firebase.firestore().collection('resturants').doc(this.resID).collection('dishes').doc(this.resID).get().then( snapshot=>{
+        this.resID = snapshot.data();
+      })
+    }
+    
 }
 
 

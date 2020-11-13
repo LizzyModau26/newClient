@@ -1,41 +1,41 @@
 <ion-toolbar>
   <ion-title>Profile</ion-title>
   <ion-buttons slot="start">
-    <ion-icon routerLink="/main" name="arrow-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-right: 10px;"></ion-icon>
+    <ion-icon routerLink="/main" name="arrow-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
   </ion-buttons>
-  <ion-buttons slot="end">
-    <ion-icon color='primary' name="search-outline" style="zoom:1.5; margin-right: 10px;"></ion-icon>
-  </ion-buttons>
+ 
 </ion-toolbar>
 
-<ion-list>
+<div >
+  <ion-list>
+    <ion-item>
+    {{resID?.img}}
+    </ion-item>
 <ion-item>
- 
+{{resID?.resName}}
 </ion-item>
 <ion-item>
-  
+  {{resID?.resAdd}}
 </ion-item>
 <ion-item>
-  Resturant Address
+  {{resID?.resDes}}
 </ion-item>
 <ion-item>
-  Registration Number 
+  {{resID?.resReg}}
 </ion-item>
 <ion-item>
-  Tel-Number
+  {{resID?.resTel}}
 </ion-item>
 <ion-item>
-  email
-</ion-item>
-<ion-item>
-  Rating
+  {{resID?.resRate}}
 </ion-item>
 </ion-list>
- 
+</div>
 
 
   <div id="bottom-content">
-  <ion-button routerLink="/edit-profile">Edit Profile</ion-button>
+    
+  <ion-button expand="block" routerLink="/edit-profile">Edit Profile</ion-button>
 </div>
 
    

@@ -63,7 +63,7 @@ export class EditProfilePage implements OnInit {
       console.log('Successful, docRef.id' );
     })
     this.profileForm.reset();
-    this.router.navigate(["profile"]);
+    
   }
 
   addPic(event) {

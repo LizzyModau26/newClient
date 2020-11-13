@@ -1,13 +1,14 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-icon routerLink="/main" name="arrow-back-outline" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
-    </ion-buttons>
-    <ion-title>edit-profile</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-toolbar>
+  <ion-title>Edit Profile</ion-title>
+  <ion-buttons slot="start">
+    <ion-icon routerLink="/profile" name="arrow-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
+  </ion-buttons>
+ 
+</ion-toolbar>
 
 <ion-content>
+  <div id="container">
+    <div id="mid-cont">
   <form [formGroup]="profileForm" (ngSubmit)="addRes()">
     <ion-grid>
     <ion-item>
@@ -50,7 +51,8 @@
   
   </ion-grid>
 </form>
-<ion-button type="submit" (click)='addRes()'>Save</ion-button>
-
+<ion-button type="submit" expand="block" (click)='addRes()'routerLink="/profile">Save</ion-button>
+</div>
+</div>
 </ion-content>
 
