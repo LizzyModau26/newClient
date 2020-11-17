@@ -5,9 +5,9 @@
   height: 100%;
   align-items:center ;
   justify-content: center;
-  background-color: rgba(255,188,0,1) ;
+  background-color: black ;
   color: white;
-  font-family: 'Nunito', serif ;
+  
   margin-top: 0%;
   
  
@@ -15,4 +15,9 @@
 ion-img{
   margin-left: 20px;
   margin-right: 20px;
+}
+h5{
+ display: flex;
+ align-self: center;
+ justify-self: center;
 }
