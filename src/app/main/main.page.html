@@ -1,40 +1,40 @@
 <ion-header>
-<ion-toolbar>
-  <ion-title>Home</ion-title>
-  <ion-buttons slot="start">
-    <ion-menu-button color="primary" autoHide="false"></ion-menu-button>
-  </ion-buttons>
-  <ion-buttons slot="end">
-    <ion-icon  name="person" routerLink="/profile" color="primary" style="zoom:1.5; margin-right: 10px;"></ion-icon>
-  </ion-buttons>
-</ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button color="primary" autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon name="person" routerLink="/profile" color="primary" style="zoom:1.5; margin-right: 10px;"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 <ion-content id="container">
-<div id="main-cont">
+  <div id="main-cont">
+    <ion-grid>
+      <ion-row>
+        <ion-card >
 
-  <ion-grid>
-    <ion-row>
-<ion-card style="background-color: #FFBC00;" routerLink="/profile">
-  
-  <ion-card-title>Store Profile</ion-card-title>
-  <ion-card-subtitle>Add and Edit Your Store Details</ion-card-subtitle>
-</ion-card>
-</ion-row>
-<ion-row>
-<ion-card style="background-color: #FFBC00;" routerLink="/gallery">
-  <ion-card-title>Store Gallery</ion-card-title>
-  <ion-card-subtitle>Add Store Dishes </ion-card-subtitle>
-</ion-card>
-</ion-row>
-<ion-row>
-<ion-card style="background-color: #FFBC00;"routerLink="/bookings">
-  <ion-card-title>Store Bookings</ion-card-title>
-  <ion-card-subtitle>View Store Bookings From Customers</ion-card-subtitle>
-</ion-card>
-</ion-row>
+          <ion-card-title>Store Profile</ion-card-title>
+          <ion-card-subtitle>Add and Edit Your Store Details</ion-card-subtitle>
+          <ion-button color="primary" routerLink="/profile" shape="rounded">Enter</ion-button>
+        </ion-card>
+      </ion-row>
+      <ion-row>
+        <ion-card >
+          <ion-card-title>Store Gallery</ion-card-title>
+          <ion-card-subtitle>Add Store Dishes </ion-card-subtitle>
+          <ion-button color="primary" routerLink="/gallery" shape="rounded">Enter</ion-button>
+        </ion-card>
+      </ion-row>
+      <ion-row>
+        <ion-card >
+          <ion-card-title>Store Bookings</ion-card-title>
+          <ion-card-subtitle>View Store Bookings From Customers</ion-card-subtitle>
+          <ion-button color="primary" routerLink="/bookings" shape="rounded">Enter</ion-button>
+        </ion-card>
+      </ion-row>
 
-  </ion-grid>
-</div>
+    </ion-grid>
+  </div>
 </ion-content>
-
-
