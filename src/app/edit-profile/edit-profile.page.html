@@ -2,7 +2,7 @@
 <ion-toolbar>
   <ion-title>Edit Store Profile</ion-title>
   <ion-buttons slot="start">
-    <ion-icon routerLink="/main" name="arrow-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
+    <ion-icon routerLink="/profile" name="chevron-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
   </ion-buttons>
 </ion-toolbar>
 </ion-header>
@@ -13,29 +13,29 @@
     <ion-grid>
     <ion-item>
       <ion-label position="floating">Name</ion-label>
-      <ion-input type="text" formControlName="resName"></ion-input>
+      <ion-input type="text" formControlName="resName" required></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Description</ion-label>
-      <ion-input type="textarea" row="3" formControlName="resDes"></ion-input>
+      <ion-input type="textarea" row="3" formControlName="resDes" required></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Address</ion-label>
-      <ion-input  type="text" formControlName="resAdd"></ion-input>
+      <ion-input  type="text" formControlName="resAdd" required></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Registration Number</ion-label>
-      <ion-input  type="text" formControlName="resReg"></ion-input>
+      <ion-input  type="text" formControlName="resReg" required></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Tel-Number</ion-label>
-      <ion-input  type="number" formControlName="resTel"></ion-input>
+      <ion-input  type="number" formControlName="resTel" required maxlength="13"></ion-input>
     </ion-item>
     <ion-row>
       <ion-col>
     <ion-item>
       <ion-label position="floating">Email</ion-label>
-      <ion-input  type="email" formControlName="resEmail"></ion-input>
+      <ion-input  type="email" formControlName="resEmail" requuired></ion-input>
     </ion-item>
   </ion-col>
 </ion-row>
