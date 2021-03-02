@@ -8,28 +8,26 @@
 </ion-toolbar>
 </ion-header>
 <ion-content>
-
+<div class="main">
   <div id="container" style="background-image:url({{resID?.img}}); background-size: cover;">
-    
+  </div>
   <div id="mid-cont" slot="end">
       <ion-grid>
-     
-        
-        
-       <ion-row><h1>{{resID.resName}}</h1></ion-row>
-       <ion-row><ion-item><h5>Resturant Description : {{resID?.resDes}}</h5></ion-item></ion-row>
-       <ion-row><ion-item><h5>Resturant Address : {{resID?.resAdd}}</h5></ion-item></ion-row>
-       <ion-row><ion-item><h5>Resturant Email : {{resID?.resEmail}}</h5></ion-item></ion-row>
-       <ion-row><ion-item><h5>Resturant Number : {{resID?.resTel}}</h5></ion-item></ion-row>
-       <ion-row><ion-item><h5>Resturant Registration No. : {{resID?.resReg}}</h5></ion-item></ion-row>
-       <ion-row><ion-item><h5>Resturant Rating : {{resID?.resRate}}<ion-icon name="star" color="primary"></ion-icon></h5></ion-item></ion-row>
+       <ion-row><h1 style="margin-bottom: 10px;text-transform: uppercase;">{{resID.resName}}</h1></ion-row>
+       <ion-row><ion-item no-padding lines="none"><h5>Resturant Description :<h5 class="data">{{resID?.resDes}}</h5></h5></ion-item></ion-row>
+       <ion-row><ion-item no-padding lines="none"><h5>Resturant Address : <h5 class="data">{{resID?.resAdd}}</h5></h5></ion-item></ion-row>
+       <ion-row><ion-item no-padding lines="none"><h5>Resturant Email : <h5 class="data">{{resID?.resEmail}}</h5></h5></ion-item></ion-row>
+       <ion-row><ion-item no-padding lines="none"><h5>Resturant Number : <h5 class="data">{{resID?.resTel}}</h5></h5></ion-item></ion-row>
+       <ion-row><ion-item no-padding lines="none"><h5>Resturant Registration No. :<h5 class="data">{{resID?.resReg}}</h5> </h5></ion-item></ion-row>
+       <ion-row><ion-item no-padding lines="none"><h5>Resturant Rating : <h5 class="data">{{resID?.resRate}}</h5><ion-icon name="star" color="primary"></ion-icon></h5></ion-item></ion-row>
      </ion-grid>
      <br>
-     <ion-button  routerLink="/edit-profile" >
+     <ion-button style="border-top-left-radius: 6px; border-top-right-radius: 6px;" routerLink="/edit-profile" >
      Edit Profile
     </ion-button>
     </div>
   </div>
+
 </ion-content>
 
    

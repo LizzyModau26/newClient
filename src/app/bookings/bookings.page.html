@@ -9,7 +9,7 @@
 <ion-content>
   <div id="main-cont">
     <div id="mid-cont">
-    <ion-grid>
+    <!-- <ion-grid>
       <div >
         <ion-row>
           <ion-card *ngFor="let item of booking">
@@ -19,12 +19,23 @@
               <ion-card-subtitle>{{item.useNum}} </ion-card-subtitle>
             </ion-card-header>
             <ion-card-content>
-              {{item.date}} at {{item.time}} <ion-icon name="star" color="primary"></ion-icon>
+              {{item.date}} at {{item.time }} <ion-icon name="star" color="primary"></ion-icon>
             </ion-card-content>
           </ion-card>
         </ion-row>
         </div>
-      </ion-grid>
+      </ion-grid> -->
+
+      <a class="card1" *ngFor="let item of booking">
+        <h3>{{item.numOfTable}} Table For {{item.numOfGues}}</h3>
+        <p class="small">Bookie: {{item.useName}}</p>
+        <p class="small">Email: {{item.useEmail}}</p>
+        <p class="small">Bookie: {{item.useNum}}</p>
+        <div class="go-corner" >
+          <!-- <div class="go-arrow">
+          </div> -->
+        </div>
+        </a>
     </div>
       </div>
 

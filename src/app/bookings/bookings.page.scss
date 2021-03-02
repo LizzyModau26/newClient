@@ -18,3 +18,90 @@ height: 100%;
     width: 90%;
     height: 90%;
 }
+
+
+h3 {
+    color: #000000;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  
+  p {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000000;
+  
+    &.small {
+      font-size: 14px;
+    }
+  }
+  
+  .go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background-color: rgba(255,188,0,1);
+    border-radius: 0 4px 0 32px;
+  }
+  
+  
+  
+  .card1 {
+    display: block;
+    position: relative;
+    max-width: 350px;
+    height: 150px;
+    background-color: #f2f8f9;
+    border-radius: 4px;
+    padding: 0px 24px;
+    margin-left: 15%;
+    margin-top: 20px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+  
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -16px;
+      right: -16px;
+      background: rgba(255,188,0,1);
+      height: 32px;
+      width: 32px;
+      border-radius: 32px;
+      transform: scale(1);
+      transform-origin: 50% 50%;
+      transition: transform 0.25s ease-out;
+    }
+  
+    &:hover:before {
+      transform: scale(21);
+    }
+  }
+  
+  .card1:hover {
+    p {
+      transition: all 0.3s ease-out;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    h3 {
+      transition: all 0.3s ease-out;
+      color: #ffffff;
+    }
+  }
+
+  ion-title{
+    text-align: left;
+    margin-left: 20px;
+    font-family: 'Nunito', serif;
+}

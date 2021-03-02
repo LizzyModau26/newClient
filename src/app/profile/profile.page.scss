@@ -1,22 +1,36 @@
-#container{
+.main{
 display: flex;
 flex-direction: column;
-
-justify-content: center;
 width: 100%;
 height:100%;
+background-color: #FFBC00;
 
-
+}
+#container{
+    top:0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    background-color: #FFBC00;
+    width: 100%;
+    height:40%;
+    position: relative;
 }
 
 #mid-cont{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height:60%;
-    justify-content: center;
+    height:65%;
+    // justify-content: center;
     font-family: 'Nunito', serif;
     background-color: white;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -26,26 +40,34 @@ height:100%;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height:200px;
+    height:100%;
 }
 img{
     width: 100%;
-    height:200px;
+    height:100%;
     justify-self: center;
 }
 h5{
     
     font-size: small;
-    color: grey;
+    // color: grey;
 }
+
 ion-item{
     display:flex;
+    flex-direction: row;
     justify-content: space-between;
-
+    display: inline-block;
+}
+.data{
+    color: grey;
+    display: inline-block;
+    text-align: right;
 }
 
 ion-title{
-    text-align: center;
+    text-align: left;
+    margin-left: 20px;
     font-family: 'Nunito', serif;
 }
 

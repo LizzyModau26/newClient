@@ -6,6 +6,7 @@ import { FirebaseService } from "../services/firebase.service";
 import { AngularFirestore } from '@angular/fire/firestore';
 import firebase from 'firebase/app';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-edit-profile',
@@ -23,10 +24,21 @@ export class EditProfilePage implements OnInit {
 
 
   constructor(public firebaseService: FirebaseService,
-    public firestore: AngularFirestore, private fb : FormBuilder, private router : Router
+    public firestore: AngularFirestore, private fb : FormBuilder, private router : Router, public alertController: AlertController
 
 
   ) { }
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Profile Update',
+      message: 'You have successfully updated your profile.',
+      buttons: ['OK']
+      
+    });
+    this.router.navigate(['profile'])
+    await alert.present();
+  }
 
 
   ngOnInit() {
